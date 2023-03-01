@@ -1,1 +1,8 @@
+#import ml flow and autolog machine learning runs
 
+import mlflow
+mlflow.pyspark.ml.autolog()
+
+#Read data in spark Dataframe
+
+occupancyDF= spark.read.csv("/FileStore/tables/Occupancy_Detection_Data.csv", header= "true", inferSchema="true")
